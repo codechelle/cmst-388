@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="form-validation.js"></script>
+</head>
+<body>
+    <section>
+        <form name="valid_form" id="valid-form" action="mailto:nichelle.s.hayes@gmail.com">
+            <!--First Name-->
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Nichelle" required><br>
+            <!--Last Name-->
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Hayes" required>
+            <!--Address-->
+            <fieldset> 
+                <legend>Address:</legend>
+                <!--Street-->
+                <label for="address">Street</label>
+                <input type="text" id="address" name="address" required>
+                <!--City-->
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+                <!--State-->
+                <label for="state">State:</label>
+                <select id="state" name="state" required>
+                    <option value="maryland">Maryland</option>
+                    <option value="virginia">Virginia</option>
+                    <option value="dc">D.C.</option>
+                    <option value="pennsylvania">Pennsylvania</option>
+                </select>
+                <!--Zip Code-->
+                <label for="zip-code">Zip Code:</label>
+                <input type="text" id="zip-code" name="zip-code" required>
+            </fieldset>
+            <!--Phone Number-->
+            <fieldset>
+                <legend>Phone:</legend>
+                <label for="phone">Area Code</label>
+                <input type="text" id="area-code" name="area-code">
+                <input type="text" id="phone-number" name="phone-number">
+            </fieldset>
+            <!--Email Address-->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br>
+            <!--Confirm Email Address-->
+            <label for="email">Confirm E-mail:</label>
+            <input type="email" id="confirm-email" name="confirm-email"><br>
+            <!--Meal Preference (radio buttons)-->
+            <fieldset>
+                <legend>Meal Preference:</legend>
+                <input type="radio" id="vegan" name="meal_preference" value="Vegan" required>
+                <label for="Vegan">Vegan</label><br>
+                <input type="radio" id="vegetarian" name="meal_preference" value="Vegetarian">
+                <label for="Vegetarian">Vegetarian</label>
+                <input type="radio" id="non-vegetarian" name="meal_preference" value="Non-Vegetarian">
+                <label for="Non-Vegetarian">Non-Vegetarian</label>
+            </fieldset>
+            <!--Contact Method-->
+            <fieldset>
+                <legend for="contact-method">Contact Method (must select two):</legend>
+                <input type="checkbox" id="phone" name="contact-method" value="phone" required>
+                <label for="phone">Phone</label><br>
+                <input type="checkbox" id="email" name="contact-method" value="email">
+                <label for="email">E-mail</label>
+                <input type="checkbox" id="mail" name="contact-method" value="mail">
+                <label for="mail">By Mail</label>
+            </fieldset>
+            <!--Comments-->
+            <textarea name="message" id="message" rows="15" cols="50"></textarea><br>
+            <!-- Submit -->
+            <input type="submit" value="Submit" id="submit" onclick="return formValidation()">
+            <!--Reset-->
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+</body>
+</html>
