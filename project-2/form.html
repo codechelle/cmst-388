@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en-US">
 <meta charset="utf-8">
 <title>Form Validation</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -26,7 +26,7 @@
                 <input type="text" id="city" name="city" required>
                 <!--State-->
                 <label for="state">State:</label>
-                <select id="state" name="state" required>
+                <select id="state" name="state" size="4" required>
                     <option value="maryland">Maryland</option>
                     <option value="virginia">Virginia</option>
                     <option value="dc">D.C.</option>
@@ -52,21 +52,21 @@
             <!--Meal Preference (radio buttons)-->
             <fieldset>
                 <legend>Meal Preference:</legend>
-                <input type="radio" id="vegan" name="meal_preference" value="Vegan" required>
+                <input type="radio" id="vegan" name="meal_preference" value="vegan" required>
                 <label for="Vegan">Vegan</label><br>
-                <input type="radio" id="vegetarian" name="meal_preference" value="Vegetarian">
+                <input type="radio" id="vegetarian" name="meal_preference" value="vegetarian">
                 <label for="Vegetarian">Vegetarian</label>
-                <input type="radio" id="non-vegetarian" name="meal_preference" value="Non-Vegetarian">
+                <input type="radio" id="non-vegetarian" name="meal_preference" value="non-vegetarian">
                 <label for="Non-Vegetarian">Non-Vegetarian</label>
             </fieldset>
             <!--Contact Method-->
             <fieldset>
-                <legend for="contact-method">Contact Method (must select two):</legend>
-                <input type="checkbox" id="phone" name="contact-method" value="phone" required>
+                <legend>Contact Method (must select two):</legend>
+                <input type="checkbox" id="phone-method" name="contact-method" value="phone" required>
                 <label for="phone">Phone</label><br>
-                <input type="checkbox" id="email" name="contact-method" value="email">
+                <input type="checkbox" id="email-method" name="contact-method" value="email">
                 <label for="email">E-mail</label>
-                <input type="checkbox" id="mail" name="contact-method" value="mail">
+                <input type="checkbox" id="mail-method" name="contact-method" value="mail">
                 <label for="mail">By Mail</label>
             </fieldset>
             <!--Comments-->
